@@ -6,7 +6,7 @@ import { split } from 'postcss/lib/list';
 export default function SearchPage() {
   const router = useRouter();
   const { query } = router.query || {};
-console.log({VideoCard, videoData});
+// console.log({VideoCard, videoData});
 
 //   // Wait for router to be ready (on first render, router.query might be empty)
   // if (!router.isReady) return <p>Loading...</p>;
