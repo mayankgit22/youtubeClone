@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 
  export  function VideoCard(props) {
-console.log({VideoCard, videoData});
+// console.log({VideoCard, videoData});
 
     return (
         <>
