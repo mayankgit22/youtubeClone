@@ -15,14 +15,16 @@ const VideoPlay = () => {
 
   return (<>
     <AppBar/>
-    <div className=' grid grid-col-1  md:grid-cols-3 gap-2 p-1'>
-      <div className='md:col-span-2 md:h-screen overflow-y-auto'>
-       <video className='w-full h-full' src={`/${video.title}.mp4`} controls autoPlay />
+    <div className=' grid grid-col-1  md:grid-cols-3 gap-4 p-1'>
+      <div className='md:col-span-2 md:h-screen md:overflow-y-auto p-1'>
+       <video className=' w-full md:w-full md:h-full mt-0' src={`/${video.title}.mp4`} controls autoPlay />
+<div>
 
         <h1 className='text-xl font-bold mt-2'>{video.title}</h1>
         <p className='text-sm text-gray-400'>
           {video.channelName} • {video.views} views • {video.time}
         </p>
+</div>
       </div>
 
       <div className='col-span-1 '>
