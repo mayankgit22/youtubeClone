@@ -1,6 +1,6 @@
+'use client'
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-
 function AppBar() {
   const [showSearch, setShowSearch] = useState(false);
   const [searchquery, setSearchQuery] = useState('');
@@ -25,6 +25,11 @@ function AppBar() {
       setShowSearch(false); // Hide search input after search
     }
   };
+    const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      handleSearch();
+    }
+  };
 
   return (
     <div className="grid grid-cols-10 p-4 gap-2 bg-black text-white shadow-md items-center rounded-full">
@@ -47,11 +52,13 @@ function AppBar() {
           // style={{ display: showSearch ? 'block' : 'none' }}
           onChange={(e) => setSearchQuery(e.target.value)}
           value={searchquery}
+               onKeyDown={handleKeyDown}
           className=" bg-gray-900 p-2 text-md w-full m-1 rounded-3xl transition-all duration-200 ease-in-out sm:block md:block lg:block"
         />
         <button
           className="bg-blue-500 text-sm text-white p-2 rounded-3xl lg:text-md"
           onClick={handleSearch}
+          type='submit'
         >
           Search
         </button>
