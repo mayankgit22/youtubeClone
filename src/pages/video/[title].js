@@ -25,7 +25,7 @@ const VideoPlay = () => {
         </p>
       </div>
 
-      <div className='col-span-1 border-2 border-blue-800'>
+      <div className='col-span-1 '>
         <h1 className='text-2xl font-bold text-center'>Recommended Videos</h1>
         <div className='flex flex-col items-center gap-3 h-screen overflow-y-auto'>
           {videoData.map((v, i) => (
